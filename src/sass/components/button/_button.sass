@@ -11,7 +11,7 @@
 	border: none
 	border-radius: 5px
 	
-	font-weight: bold
+	font-weight: 100
 	text-decoration: none
 	line-height: 1.4
 	
@@ -46,11 +46,26 @@
 			font-size: 18px
 			text-align: left
 
+	&_brand-1-small,
+	&_brand-1-large
+		color: $color-white
 
+		&:hover
+			transform: translateY(5px)
 	
-	// &_brand-1-small
-	// 	+bg('../img/btn_small_brand-1.png')
-	// &_brand-1-large
-	// 	+bg('../img/btn_large_brand-1.png')
+	&_brand-1-small
+		+bg('../img/btn_small_brand-1.png')
+
+	&_brand-1-large
+		+bg('../img/btn_large_brand-1.png')
+		
+		+min(md)
+			min-width: 300px
+			min-height: 70px
+
+		+min(lg)
+			min-width: 363px
+			min-height: 80px
+			font-size: 18px
 
 	+btn-static-iteration
