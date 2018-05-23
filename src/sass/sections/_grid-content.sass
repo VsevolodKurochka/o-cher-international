@@ -53,6 +53,11 @@ $grid-content-title: ('default': 25px, 'xs': 22px, 'sm': 25px, 'md': 30px, 'lg':
 				display: flex
 				width: 100%
 
+			&:last-child &
+
+				+ee('header')
+					min-width: 50%
+
 		+ee('header')
 			display: flex
 			align-items: center

@@ -1,0 +1,56 @@
++b('catching')
+	+margin-y(45px)
+
+	+min(lg)
+
+		+margin-y(60px)
+
+	+e('header')
+		text-align: center
+		margin-bottom: 45px
+
+		+min(lg)
+			margin-bottom: 60px
+
+	+e('title')
+		line-height: 1.2
+		font-size: 25px
+		margin-bottom: 30px
+
+		+min(md)
+			font-size: 30px
+
+		+min(lg)
+			font-size: 36px
+
+	+e('subtitle')
+
+		+min(lg)
+			font-size: 21px
+
+	+e('body')
+
+		+relative
+		+padding-y(60px)
+
+		+m('1')
+			+bg('../img/catching-1.jpg')
+
+		+m('left')
+
+			&:before
+				content: ""
+				+absolute(0, null, null, 0)
+				+size(100%)
+				+bg('../img/catching-left.png')
+
+				+min(md)
+					width: 700px
+
+		+min(sm)
+			+padding-y(90px)
+
+		+min(lg)
+			+padding-y(120px)
+			@media only screen
+				background-attachment: fixed
