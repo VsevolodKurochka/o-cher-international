@@ -5,7 +5,11 @@
 		+ee('content')
 			display: inline-block
 
-		+max(md)
-			img
-				vertical-align: middle
-				max-height: 28px
+			+max(md)
+				&-img
+					vertical-align: middle
+					max-height: 28px
+
+			+min(md)
+				&-img
+					max-height: 50px

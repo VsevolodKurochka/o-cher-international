@@ -9,7 +9,7 @@
 	+btn-size($btn-default-padding, $btn-default-size)
 
 	border: none
-	border-radius: 0
+	border-radius: 5px
 	
 	font-weight: bold
 	text-decoration: none
@@ -36,7 +36,9 @@
 			box-shadow: none
 
 	&_nav
-		background-color: $color-responsive-menu-light
+		background-color: transparent
+		color: $color-white
+		background-image: linear-gradient( 90deg, rgb(255,110,46) 0%, rgb(255,135,46) 100%)
 
 		+max(md)
 			padding: 15px
@@ -45,16 +47,10 @@
 			text-align: left
 
 
-		+min(md)
-			background-color: $color-brand-1
-
-	//-
-	//- Iteration button fluid color
-	//-
+	
+	// &_brand-1-small
+	// 	+bg('../img/btn_small_brand-1.png')
+	// &_brand-1-large
+	// 	+bg('../img/btn_large_brand-1.png')
 
 	+btn-static-iteration
-
-	//-
-	//- Iteration button border-color
-	//-
-	//+btn-border-iteration
