@@ -1,0 +1,76 @@
+$grid-content-title: ('default': 25px, 'xs': 22px, 'sm': 25px, 'md': 30px, 'lg': 36px)
+
++b('grid-content')
+
+	+margin-y(45px)
+
+	+min(md)
+		display: flex
+		align-items: center
+
+		+m('reverse')
+			flex-direction: row-reverse
+
+	+min(lg)
+		+margin-y(90px)
+
+	+e('header')
+		+min(md)
+			width: 50%
+
+	&_reverse &__header
+		+min(md)
+			text-align: right
+
+	+e('body')
+		+padding-x(15px)
+
+		+min(md)
+			max-width: 600px
+
+		+ee('content')
+			> *:not(:last-child)
+				margin-bottom: 15px
+
+		+ee('footer')
+			font-family: 'SourceSerifPro-Black'
+
+	+e('title')
+		margin-bottom: 30px
+		+fs-simple($grid-content-title)
+	
+	+e('subtitle')
+		margin-bottom: 30px
+
+	+e('icon')
+		margin-bottom: 30px
+
+		+min(md)
+			+padding-x(15px)
+			width: 50%
+			
+			&:last-child
+				display: flex
+				width: 100%
+
+		+ee('header')
+			display: flex
+			align-items: center
+			margin-bottom: 10px
+
+		+ee('image')
+			max-height: 60px
+
+			+ee('wrapper')
+				margin-right: 15px
+				width: 70px
+				font-size: 0
+
+		+ee('title')
+			font-family: 'SourceSerifPro-Black'
+			line-height: 1.2
+			font-size: 20px
+			+min(md)
+				font-size: 22px
+			+min(lg)
+				font-size: 25px
