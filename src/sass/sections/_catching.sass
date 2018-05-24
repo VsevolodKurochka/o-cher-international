@@ -32,6 +32,7 @@
 
 		+relative
 		+padding-y(60px)
+		overflow: hidden
 
 		+m('1')
 			+bg('../img/catching-1.jpg')
@@ -40,12 +41,12 @@
 
 			&:before
 				content: ""
-				+absolute(0, null, null, 0)
+				+absolute(-100%, null, null, -10%)
 				+size(100%)
 				+bg('../img/catching-left.png')
 
 				+min(md)
-					width: 700px
+					+size(800px)
 
 		+min(sm)
 			+padding-y(90px)
