@@ -7,28 +7,36 @@ $greeting-title: ('default': 25px, 'xs': 30px, 'sm': 35px, 'md': 37px, 'lg': 45p
 		flex-flow: row wrap
 		align-items: center
 
+	+m('header')
+		+max(md)
+			padding-top: 75px
+
 	+e('part')
 
 		+m('bg')
-
 			+bg('../img/greeting.jpg')
+
+		+m('content')
+			+padding-x(15px)
+
+			&:before
+				content: ""
+				+absolute(0, null, null, 0)
+				+size(100%)
+				+bg('../img/greeting-dots.png')
+				z-index: -1
+				opacity: 0.5
 
 		+min(md)
 			+m('content')
 				position: relative
 				flex-basis: 0
 				flex-grow: 1
-				padding-top: 45px
-				padding-left: 10%
-				padding-right: 5%
-
+				padding: 45px 5% 0 10%
+				
 				&:before
-					content: ""
-					+absolute(0, null, null, 0)
 					+size(800px, 600px)
-					+bg('../img/greeting-dots.png')
-					z-index: -1
-					opacity: 0.5
+				
 
 			+m('bg')
 				+size(300px, 700px)
@@ -72,6 +80,11 @@ $greeting-title: ('default': 25px, 'xs': 30px, 'sm': 35px, 'md': 37px, 'lg': 45p
 		+ee('image')
 			width: 30px
 			margin-right: 15px
+
+		+max(sm)
+			+ee('content')
+				br
+					display: none
 
 	+e('button')
 		+min(md)
