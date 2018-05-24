@@ -1,14 +1,26 @@
 +b('advantages')
 
 	+e('header')
+		text-align: center
 		margin-bottom: 45px
 
 		+min(sm)
 			margin-bottom: 60px
 
+		+min(lg)
+			margin-bottom: 90px
+
+	+e('row')
+
+		+min(sm)
+			align-items: baseline
+
 	+e('item')
+
+		margin-bottom: 30px
 		
 		+ee('header')
+			+relative
 			display: inline-flex
 			align-items: center
 			justify-content: center
@@ -16,9 +28,74 @@
 			border: 1px solid $color-brand-1
 			+size(80px)
 
+		+ee('image')
+			height: 40px
+
 		+min(sm)
 			display: flex
+
+			margin-bottom: 90px
+
+			@at-root
+				%advantages-ball
+					content: ""
+					position: absolute
+					left: 50%
+					+size(40px)
+					background-color: #f1f1f1
+					border-radius: 100%
+					margin-left: -20px
+
+			&_ball-top &
+				&-header
+					&:before
+						@extend %advantages-ball
+						top: -60px
+
+			&_ball-bottom &
+				&-header
+					&:after
+						@extend %advantages-ball
+						bottom: -60px
+
+			&_left
+				align-items: center
+
+			&_left &
+
+				&-header
+					margin-right: 15px
 		
 			&_right
 				align-items: center
 				flex-direction: row-reverse
+
+			&_right &
+
+				&-body
+					margin-right: 15px
+					text-align: right
+
+			&_top
+				flex-direction: column-reverse
+				justify-content: center
+				text-align: center
+
+			&_top &
+
+				&-body
+					margin-bottom: 15px
+
+				&-header
+					+margin-x(auto)
+
+			&_bottom
+				flex-direction: column
+				justify-content: center
+				text-align: center
+
+			&_bottom &
+
+				&-header
+					margin-bottom: 15px
+					+margin-x(auto)
