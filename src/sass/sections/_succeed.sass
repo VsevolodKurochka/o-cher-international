@@ -1,0 +1,74 @@
++b('succeed')
+	overflow: hidden
+	+margin-y(45px)
+
+	+min(md)
+		+margin-y(90px)
+
+	+e('header')
+		text-align: center
+		margin-bottom: 45px
+
+		+min(lg)
+			margin-bottom: 60px
+
+	+e('title')
+		margin-bottom: 30px
+
+	+e('item')
+
+		+relative
+
+		+min(md)
+
+			@at-root
+				%succeed-circle
+					content: ""
+					position: absolute
+					top: 50%
+					+size(40px)
+					background-color: #f1f1f1
+					border-radius: 100%
+
+			&:before
+				@extend %succeed-circle
+				left: -20px
+
+			&:last-child:after
+				@extend %succeed-circle
+				right: -20px
+
+		+ee('inner')
+			+relative
+			+margin-x(auto)
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 100%
+			border: 1px solid $color-brand-1
+
+			&:before
+				content: ""
+				+absolute(50%, null, null, 50%)
+				+size(80%)
+				border-radius: 100%
+				border: 1px solid $color-brand-1
+				opacity: 0.3
+				transform: translate(-50%, -50%)
+
+			+min(sm)
+				+size(340px)
+			
+			+min(md)
+				+size(400px)
+
+			+min(lg)
+				+size(420px)
+
+
+			+ee('content')
+				text-align: center
+
+			+ee('title')
+				margin-bottom: 45px
+				font-family: 'SourceSerifPro-Black'
