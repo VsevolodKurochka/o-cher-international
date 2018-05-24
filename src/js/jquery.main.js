@@ -13,10 +13,10 @@ $(document).ready(function(){
 
 	// Collapse
 
-		$(".js-collapse__group.active").children(".js-collapse__group-body").slideDown();
+		$(".collapse__group.active").children(".collapse__group-body").slideDown();
 
-		$('.js-collapse').on('click', '.js-collapse__group-header', function(){
-			var collapseInner = $(this).parents('.js-collapse').find('.js-collapse__group');
+		$('.collapse').on('click', '.collapse__group-header', function(){
+			var collapseInner = $(this).parents('.collapse').find('.collapse__group');
 
 			$(this)
 				.parent()
@@ -31,20 +31,9 @@ $(document).ready(function(){
 				.removeClass('active');
 
 			collapseInner
-				.children('.js-collapse__group-body')
+				.children('.collapse__group-body')
 				.not($(this).next())
 				.slideUp("slow");
 
 		});
-	// Tabs
-		$('[data-action="tab"]').click(function(){			
-			// Tab links toggle class
-				$(this).closest(".vtabs__list").children("li").removeClass('active');
-				$(this).parent().addClass('active');
-			// Show tab content
-				var tabTarget = $(this).attr('data-target');
-				$(tabTarget).fadeIn('slow');
-				$(".vtabs__content > div").not($(tabTarget)).fadeOut('slow');
-		});
-	// Develope
 });	
