@@ -1,0 +1,73 @@
++b('study')
+	overflow: hidden
+	+margin-y(45px)
+
+	+min(md)
+		+margin-y(90px)
+
+	+e('header')
+		margin-bottom: 45px
+		text-align: center
+
+		+min(lg)
+			margin-bottom: 60px
+
+	+e('title')
+		margin-bottom: 30px
+
+	+e('item')
+
+		+ee('header')
+			+relative
+			text-align: center
+			margin-bottom: 45px
+			+ee('inner')
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				+size(160px)
+				+margin-x(auto)
+				border-radius: 100%
+				border: 1px solid $color-brand-1
+
+		+min(sm)
+
+			@at-root
+
+				%study-circle
+					content: ""
+					position: absolute
+					top: 50%
+					+size(40px)
+					margin-top: -20px
+					background-color: #e8e8e8
+					border-radius: 100%
+					opacity: 0.6
+			
+			+ee('header')
+				&:before
+					@extend %study-circle
+					left: -50px
+					
+			&:last-child &-header
+				&:after
+					@extend %study-circle
+					right: -50px
+
+		+ee('image')
+			height: 80px
+
+		+ee('title')
+			margin-bottom: 30px
+			text-align: center
+			line-height: 1.2
+			font-family: 'SourceSerifPro-Black'
+			font-size: 20px
+
+			+min(md)
+				font-size: 24px
+			+min(lg)
+				font-size: 30px
+
+		+ee('content')
+			text-align: center
