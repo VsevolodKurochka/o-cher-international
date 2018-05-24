@@ -1,0 +1,80 @@
++b('differences')
+
+	+margin-y(45px)
+
+	+e('header')
+		text-align: center
+		margin-bottom: 45px
+
+		+min(sm)
+			margin-bottom: 60px
+
+	+e('content')
+
+		margin-bottom: 45px
+
+		+ee('header')
+			display: none
+
+			+min(sm)
+				display: flex
+				margin-bottom: 30px
+
+				+ee('part')
+					width: 50%
+					text-align: center
+					font-family: 'SourceSerifPro-Black'
+					color: #a1a1a1
+
+					+m('highlight')
+						color: $color-brand-1
+
+	+e('item')
+
+		&:not(:last-child)
+			margin-bottom: 30px
+
+		+ee('title')
+			+relative
+			font-family: 'SourceSerifPro-Black'
+			margin-bottom: 15px
+
+			&:before
+				content: ''
+				+absolute(50%, null, null, 0)
+				+size(100%, 3px)
+				background-color: #efefef
+				transform: translateY(-50%)
+				z-index: -1
+
+			+ee('inner')
+				display: inline-block
+				min-width: 200px		
+				background-color: #fff
+
+				+min(sm)
+					min-width: 260px
+
+		+ee('row')
+
+			+ee('title')
+				margin-bottom: 10px
+				font-family: 'SourceSerifPro-Black'
+				font-size: 20px
+				color: #a1a1a1
+
+				+m('highlight')
+					color: $color-brand-1
+
+				+min(sm)
+					display: none
+
+		+ee('column')
+
+			+max(sm)
+
+				&:not(:last-child)
+					margin-bottom: 15px
+
+	+e('footer')
+		text-align: center

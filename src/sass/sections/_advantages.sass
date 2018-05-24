@@ -1,0 +1,24 @@
++b('advantages')
+
+	+e('header')
+		margin-bottom: 45px
+
+		+min(sm)
+			margin-bottom: 60px
+
+	+e('item')
+		
+		+ee('header')
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			border-radius: 100%
+			border: 1px solid $color-brand-1
+			+size(80px)
+
+		+min(sm)
+			display: flex
+		
+			&_right
+				align-items: center
+				flex-direction: row-reverse
