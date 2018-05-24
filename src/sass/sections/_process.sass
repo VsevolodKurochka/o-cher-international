@@ -11,20 +11,27 @@
 
 	+e('item')
 		+relative
-		margin-bottom: 60px
+		margin-bottom: 30px
+
+		+min(sm)
+			margin-bottom: 60px
 
 		+ee('headline')
+			margin-bottom: 0
 			color: #c6c6c6
 			font-family: 'SourceSerifPro-Black'
 
 			+min(sm)
-
+				
 				+absolute(50px, null, null, 0)
 				transform: rotate(-90deg)
 
 		+ee('title')
 			font-family: 'SourceSerifPro-Black'
-			margin-bottom: 30px
+			margin-bottom: 15px
+
+			+min(sm)
+				margin-bottom: 30px
 
 		+ee('content')
 

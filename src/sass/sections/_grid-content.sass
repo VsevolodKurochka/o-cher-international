@@ -16,9 +16,14 @@
 		+min(md)
 			width: 50%
 
+	+e('image')
+
+		+max(md)
+
+			max-width: 300px
+
 	&_reverse &__header
-		+min(md)
-			text-align: right
+		text-align: right
 
 	+e('body')
 		+padding-x(15px)
@@ -41,7 +46,8 @@
 		margin-bottom: 30px
 
 	+e('icon')
-		margin-bottom: 30px
+		&:not(:last-child)
+			margin-bottom: 30px
 
 		+min(md)
 			+padding-x(15px)

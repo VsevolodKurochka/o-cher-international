@@ -19,6 +19,9 @@
 
 		+relative
 
+		&:not(:last-child)
+			margin-bottom: 30px
+
 		+min(md)
 
 			@at-root
@@ -41,6 +44,8 @@
 		+ee('inner')
 			+relative
 			+margin-x(auto)
+			+size(270px)
+
 			display: flex
 			align-items: center
 			justify-content: center
@@ -69,6 +74,14 @@
 			+ee('content')
 				text-align: center
 
+				font-size: 15px
+
+				+min(md)
+					font-size: 18px
+
 			+ee('title')
-				margin-bottom: 45px
+				margin-bottom: 15px
 				font-family: 'SourceSerifPro-Black'
+
+				+min(md)
+					margin-bottom: 45px
