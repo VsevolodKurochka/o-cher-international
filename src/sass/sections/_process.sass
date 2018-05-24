@@ -1,0 +1,35 @@
++b('process')
+
+	+margin-y(45px)
+
+	+e('header')
+		text-align: center
+		margin-bottom: 45px
+
+		+min(lg)
+			margin-bottom: 60px
+
+	+e('item')
+		+relative
+		margin-bottom: 60px
+
+		+ee('headline')
+			color: #c6c6c6
+			font-family: 'SourceSerifPro-Black'
+
+			+min(sm)
+
+				+absolute(50px, null, null, 0)
+				transform: rotate(-90deg)
+
+		+ee('title')
+			font-family: 'SourceSerifPro-Black'
+			margin-bottom: 30px
+
+		+ee('content')
+
+			+min(sm)
+				padding-left: 90px
+
+	+e('footer')
+		text-align: center
