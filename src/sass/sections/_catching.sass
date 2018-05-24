@@ -37,6 +37,9 @@
 		+m('1')
 			+bg('../img/catching-1.jpg')
 
+		+m('2')
+			+bg('../img/catching-2.jpg')
+
 		+m('left')
 
 			&:before
@@ -44,6 +47,17 @@
 				+absolute(-100%, null, null, -10%)
 				+size(100%)
 				+bg('../img/catching-left.png')
+
+				+min(md)
+					+size(800px)
+
+		+m('right')
+
+			&:before
+				content: ""
+				+absolute(-100%, -10%)
+				+size(100%)
+				+bg('../img/catching-right.png')
 
 				+min(md)
 					+size(800px)
