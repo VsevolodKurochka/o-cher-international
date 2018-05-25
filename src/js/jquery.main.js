@@ -36,4 +36,8 @@ $(document).ready(function(){
 				.slideUp("slow");
 
 		});
+
+
+	$("input[type='phone']").intlTelInput();
+
 });	

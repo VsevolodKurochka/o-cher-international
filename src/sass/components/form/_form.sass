@@ -3,6 +3,9 @@
 
 	width: 100%
 
+	.country-list
+		font-size: 13px
+
 	&__row
 		#{$self}_block &
 			+rowOffset
@@ -11,7 +14,6 @@
 		&__row
 			#{$self}_line &
 				+rowOffset
-
 
 	+min(sm)
 		#{$self}_line &
@@ -30,6 +32,11 @@
 			&__control
 				height: 100%
 
+		&_line 
+			.intl-tel-input
+				height: 100%
+			.country-list
+				max-width: 344px
 
 	@if $themeFormDesign == "new"
 		&__control
