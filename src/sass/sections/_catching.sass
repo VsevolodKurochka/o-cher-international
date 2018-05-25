@@ -45,27 +45,7 @@
 		+m('3')
 			+bg('../img/catching-3.jpg', 0 center, no-repeat)
 
-		+m('left')
-
-			&:before
-				content: ""
-				+absolute(-100%, null, null, -10%)
-				+size(100%)
-				+bg('../img/catching-left.png')
-
-				+min(md)
-					+size(800px)
-
-		+m('right')
-
-			&:before
-				content: ""
-				+absolute(-100%, -10%)
-				+size(100%)
-				+bg('../img/catching-right.png')
-
-				+min(md)
-					+size(800px)
+		
 
 		+min(sm)
 			+padding-y(90px)
@@ -80,5 +60,28 @@
 
 		+min(lg)
 			+padding-y(120px)
+
+			+m('left')
+
+			&:before
+				content: ""
+				+absolute(-100%, null, null, -10%)
+				+size(100%)
+				+bg('../img/catching-left.png')
+
+				+min(md)
+					+size(800px)
+
+			+m('right')
+
+				&:before
+					content: ""
+					+absolute(-100%, -10%)
+					+size(100%)
+					+bg('../img/catching-right.png')
+
+					+min(md)
+						+size(800px)
+						
 			@media only screen
 				background-attachment: fixed

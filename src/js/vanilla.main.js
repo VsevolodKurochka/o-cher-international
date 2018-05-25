@@ -29,7 +29,6 @@
 			this.navigation = document.getElementById('js-navigation');
 			this.menu = document.getElementById('js-navigation-menu');
 			this.hamburger = document.getElementById('js-nav-hamburger');
-			this.addition = document.getElementById('js-nav-addition');
 			this.links = '.nav__menu-item-link';
 
 			this.linksScroll();
@@ -42,9 +41,6 @@
 				this.hamburger.addEventListener( 'click', (e) => this.hamburgerClick(e) );
 			}
 
-			if(exists(this.addition)) {
-				this.addition.addEventListener( 'click', (e) => this.additionClick(e) );
-			}
 		}
 
 		checkScrollY() {
@@ -62,12 +58,6 @@
 
 			toggleClass(this.hamburger, 'active');
 			toggleClass(this.menu, `nav__menu_active`);
-
-		}
-
-		additionClick(el) {
-
-			toggleClass(this.addition, 'active');
 
 		}
 
