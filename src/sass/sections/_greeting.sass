@@ -19,7 +19,9 @@ $greeting-title: ('default': 25px, 'xs': 30px, 'sm': 35px, 'md': 37px, 'lg': 45p
 			+bg('../img/greeting.jpg')
 
 		+m('content')
+			+relative
 			+padding-x(15px)
+			z-index: 3
 
 			&:before
 				content: ""
@@ -31,7 +33,6 @@ $greeting-title: ('default': 25px, 'xs': 30px, 'sm': 35px, 'md': 37px, 'lg': 45p
 
 		+min(md)
 			+m('content')
-				position: relative
 				flex-basis: 0
 				flex-grow: 1
 				padding: 45px 5% 0 10%

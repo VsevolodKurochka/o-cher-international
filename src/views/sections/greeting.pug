@@ -1,6 +1,6 @@
 +b.SECTION.greeting._header
-	+e.part._content
-		+e.H1.title 
+	+e.part._content.wow.fadeInLeft
+		+e.H1.title.wow.fadeInUp(data-wow-delay="0.1s")
 			| Среднее 
 			span.font-black образование
 			br
@@ -10,7 +10,7 @@
 			| International Baccalaureate
 			span.color-brand-1 *
 		
-		+e.H2.subtitle
+		+e.H2.subtitle.wow.fadeInUp(data-wow-delay="0.2s")
 			span.color-brand-1 *
 			| Что невозможно по окончании обычной или даже престижной школы за границей.
 			br
@@ -18,7 +18,7 @@
 		
 		+e.icons
 
-			+e.icon
+			+e.icon.wow.fadeInUp(data-wow-delay="0.3s")
 				+e.icon-image(src="img/greeting-1.svg")
 				+e.P.icon-content 
 					| Крупнейшая 
@@ -28,7 +28,7 @@
 					br
 					| более 4 тыс. школ по всему миру
 
-			+e.icon
+			+e.icon.wow.fadeInUp(data-wow-delay="0.35s")
 				+e.icon-image(src="img/greeting-2.svg")
 				+e.P.icon-content
 					span.font-black Доступные условия
@@ -38,7 +38,7 @@
 					br
 					| украинской семьи
 
-			+e.icon
+			+e.icon.wow.fadeInUp(data-wow-delay="0.4s")
 				+e.icon-image(src="img/greeting-3.svg")
 				+e.P.icon-content 
 					| Реальный шанс поступить в 
@@ -51,4 +51,4 @@
 
 			+b.BUTTON.btn._brand-1-large(data-action="modal" data-open="#modal-form") Записаться на консультацию
 
-	+e.part._bg
+	+e.part._bg.wow.fadeInRight
