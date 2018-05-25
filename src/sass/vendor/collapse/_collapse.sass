@@ -10,34 +10,44 @@
 
     &-header
       +relative
-      padding: 20px 15px
+      padding: 20px 40px 20px 20px
       cursor: pointer
       +transition
+
+      +min(sm)
+        padding-left: 60px
 
       &:hover
         background-color: darken(#eaeaea, 0.1)
 
       &:before
         content: "?"
-        +absolute(50%, null, null, 15px)
+        +absolute(50%, null, null, 5px)
         transform: translateY(-50%)
         color: $color-brand-1
         font-family: 'SourceSerifPro-Black'
-        font-size: 36px
+        font-size: 20px
+        
+        +min(sm)
+          font-size: 36px
+          left: 15px
 
       &:after
         content: ""
         +absolute(50%, 15px)
         transform: translateY(-50%) scaleY(-1)
-        +size(29px)
+        +size(20px)
         +bg('../img/collapse-mark.svg')
 
-      +min(sm)
-        padding-left: 60px
-
+        +min(sm)
+          +size(29px)
 
     &-title
       font-family: 'SourceSerifPro-Black'
+      font-size: 14px
+
+      +min(sm)
+        font-size: 19px
 
       +min(md)
         font-size: 21px
