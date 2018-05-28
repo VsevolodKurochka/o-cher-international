@@ -7,7 +7,7 @@ import gulp 						from 'gulp';
 import folders					from './folders';
 import image 						from 'gulp-image';
 import del 							from 'del';
-import {server, reload, serve} from './browserSync';
+import {reload} from './browserSync';
 
 
 // Task `image`
